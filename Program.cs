@@ -16,6 +16,7 @@ namespace guessing_game
                 Console.WriteLine("1.) Easy - 8 tries");
                 Console.WriteLine("2.) Medium - 6 tries");
                 Console.WriteLine("3.) Hard - 4 tries");
+                Console.WriteLine("4.) Cheater - Infinite");
 
                 difficulty = int.Parse(Console.ReadLine());
                  switch (difficulty)
@@ -28,6 +29,9 @@ namespace guessing_game
                     break;
                 case 3: 
                     userTry = 4;
+                    break;
+                case 4:
+                    userTry = int.MaxValue;
                     break;
                 default:
                     userTry = 8;
