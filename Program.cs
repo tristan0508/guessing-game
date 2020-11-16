@@ -6,10 +6,22 @@ namespace guessing_game
     {
         static void Main(string[] args)
         {
+            int secretNumber = 43;
+            int userTry = 1;
             Console.WriteLine("Guess the secret number...");
-            string guess = Console.ReadLine();
-            Console.WriteLine(guess);
+            int guess = int.Parse(Console.ReadLine());
             
+            while(guess != secretNumber && userTry < 4){
+                Console.WriteLine("guess again");
+                guess = int.Parse(Console.ReadLine());
+                userTry++;
+            }
+
+            if(userTry == 4){
+                Console.WriteLine("Failure!");
+            } else {
+                Console.WriteLine("Success!");
+            }
         }
 
     }
